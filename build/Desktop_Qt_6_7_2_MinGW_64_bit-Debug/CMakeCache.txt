@@ -337,6 +337,9 @@ Qt6Gui_DIR:PATH=C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Gui
 //The directory containing a CMake configuration file for Qt6LinguistTools.
 Qt6LinguistTools_DIR:PATH=C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6LinguistTools
 
+//The directory containing a CMake configuration file for Qt6SQL.
+Qt6SQL_DIR:PATH=C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Sql
+
 //The directory containing a CMake configuration file for Qt6Sql.
 Qt6Sql_DIR:PATH=C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Sql
 

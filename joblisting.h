@@ -7,10 +7,10 @@ class JobListing
     public:
         JobListing();
         JobListing(QString link, QString company, QString jobTitle, bool referral);
-        QString getCompany();
-        QString getLink();
-        QString getJobTitle();
-        bool getReferralStatus();
+        QString getCompany() const;
+        QString getLink() const;
+        QString getJobTitle() const;
+        bool getReferral() const;
 
 
     private:

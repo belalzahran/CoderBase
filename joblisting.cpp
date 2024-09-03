@@ -9,3 +9,19 @@ JobListing::JobListing(QString link, QString company, QString jobTitle, bool ref
     this->jobTitle = jobTitle;
     this->referral = referral;
 }
+
+QString JobListing::getCompany() const{
+    return this->company;
+}
+
+QString JobListing::getLink() const{
+    return this->link;
+}
+
+QString JobListing::getJobTitle() const{
+    return this->jobTitle;
+}
+
+bool JobListing::getReferral() const{
+    return this->referral;
+}

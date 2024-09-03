@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets SQL LinguistTools)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets SQL LinguistTools)
 
 set(TS_FILES FirstProject_en_US.ts)
 
@@ -20,41 +20,36 @@ set(PROJECT_SOURCES
         mainwindow.h
         mainwindow.ui
         ${TS_FILES}
+        jobsearchclass.h
+        jobsearchclass.cpp
+        jobsearchclass.ui
+        joblisting.h
+        joblisting.cpp
+        databasemanager.h
+        databasemanager.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(FirstProject
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        jobsearchclass.h jobsearchclass.cpp jobsearchclass.ui
-        joblisting.h joblisting.cpp
-        databasemanager.h databasemanager.cpp
-        databasemanager.h databasemanager.cpp
-
     )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET FirstProject APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
-
     qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 else()
     if(ANDROID)
         add_library(FirstProject SHARED
             ${PROJECT_SOURCES}
         )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
         add_executable(FirstProject
             ${PROJECT_SOURCES}
         )
     endif()
-
     qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 endif()
 
-target_link_libraries(FirstProject PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+# Link against the Qt SQL module
+target_link_libraries(FirstProject PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -80,4 +75,3 @@ install(TARGETS FirstProject
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(FirstProject)
 endif()
-

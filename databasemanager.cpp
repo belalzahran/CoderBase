@@ -54,6 +54,11 @@ bool DatabaseManager::addJob(const QString& jobTitle, const QString& company, co
 }
 
 
+bool DatabaseManager::addJob(const JobListing& job){
+    return addJob(job.getJobTitle(), job.getCompany(), job.getLink(), job.getReferral());
+}
+
+
 
 
 
