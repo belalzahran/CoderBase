@@ -19,7 +19,7 @@ DatabaseManager::DatabaseManager() {
 
 
 bool DatabaseManager::openDatabase(){
-    db = QSqlDatabase::addDatabase("QMYSQL");
+    db = QSqlDatabase::addDatabase("QSQLITE");
     db.setHostName("localhost");
     db.setDatabaseName("codebasedb");
     db.setUserName("root");
@@ -37,6 +37,7 @@ bool DatabaseManager::openDatabase(){
 
 bool DatabaseManager::addJob(const QString& jobTitle, const QString& company, const QString& link, bool referral) {
 
+    qDebug() << "Driver List: " << QSqlDatabase::drivers();
     QSqlQuery query;
 
     query.prepare("INSERT into jobs (jobTitle, company, link, referral) VALUES (?,?,?,?)");

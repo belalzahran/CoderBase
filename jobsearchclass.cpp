@@ -32,6 +32,13 @@ void JobSearchClass::on_submit_clicked()
 
     JobListing newJob = JobListing(linkBox->text(), companyBox->text(), jobTitleBox->text(), referralCheckBox->isChecked());
 
+    // Use singleton instance of DatabaseManager
+    DatabaseManager& dbManager = DatabaseManager::instance();
+    if (!dbManager.addJob(newJob)) {
+        QMessageBox::warning(this, "Error", "Failed to add job to database");
+        return;
+    }
+
 
     this->jobList.push_back(newJob);
     this->jobCount++;
