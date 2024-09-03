@@ -1,0 +1,22 @@
+# ninja log v6
+713	1711	7470423257551317	CMakeFiles/FirstProject.dir/joblisting.cpp.obj	6a25cee1391f6dd4
+20	79	7470485267630369	D:/Qt-Projects/FirstProject/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	c31f047cbdff49ac
+87	213	7470485268290371	FirstProject_autogen/mocs_compilation.cpp	ef28fed62f3f0bb6
+87	213	7470485268290371	FirstProject_autogen/timestamp	ef28fed62f3f0bb6
+213	2244	7470485269548727	CMakeFiles/FirstProject.dir/mainwindow.cpp.obj	6e84ef0fadb9e224
+87	213	7470485268290371	D:/Qt-Projects/FirstProject/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/FirstProject_autogen/timestamp	ef28fed62f3f0bb6
+87	213	7470485268290371	D:/Qt-Projects/FirstProject/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/FirstProject_autogen/mocs_compilation.cpp	ef28fed62f3f0bb6
+215	2253	7470485269578730	CMakeFiles/FirstProject.dir/jobsearchclass.cpp.obj	4f7480693e650991
+686	2597	7470341677442284	CMakeFiles/FirstProject.dir/main.cpp.obj	355cd2307b4ef441
+617	2184	7470469549711126	CMakeFiles/FirstProject.dir/FirstProject_autogen/mocs_compilation.cpp.obj	268b7f3f95a08d48
+2253	2469	7470485289949777	FirstProject.exe	973a87f860003845
+71	702	7470485399712563	build.ninja	106dc3a24e4fe15
+217	255	7470485269588733	CMakeFiles/FirstProject.dir/databasemanager.cpp.obj	3c1476db0b10bb04
+19	84	7470485404382557	D:/Qt-Projects/FirstProject/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	c31f047cbdff49ac
+92	227	7470485405112593	FirstProject_autogen/timestamp	ef28fed62f3f0bb6
+92	227	7470485405112593	FirstProject_autogen/mocs_compilation.cpp	ef28fed62f3f0bb6
+92	227	7470485405112593	D:/Qt-Projects/FirstProject/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/FirstProject_autogen/timestamp	ef28fed62f3f0bb6
+92	227	7470485405112593	D:/Qt-Projects/FirstProject/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/FirstProject_autogen/mocs_compilation.cpp	ef28fed62f3f0bb6
+227	2269	7470485406462568	CMakeFiles/FirstProject.dir/mainwindow.cpp.obj	6e84ef0fadb9e224
+230	2294	7470485406492572	CMakeFiles/FirstProject.dir/jobsearchclass.cpp.obj	4f7480693e650991
+2295	2494	7470485427132679	FirstProject.exe	973a87f860003845
